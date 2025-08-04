@@ -1,6 +1,5 @@
 var count=0;
 function addTask(){
-    count++;
     var task=document.getElementById("input-text").value.trim();
     if(task==="")
     {
@@ -8,6 +7,7 @@ function addTask(){
         alert("Add your Task")
         return;
     }
+    count++;
     var list=document.createElement("li");
     list.innerHTML=`<p>task ${count}</p>    ${task} <button class="completed" onclick="toggleComplete(event)">completed</button>`
     document.getElementById("tasks").append(list);
